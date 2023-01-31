@@ -337,7 +337,7 @@ class AbstractSiteUser(models.Model):
         ),
         related_name="sitegroup_siteusers",
     )
-    permissions = models.ManyToManyField(
+    site_user_permissions = models.ManyToManyField(
         "auth.Permission",
         verbose_name=_("user permissions"),
         blank=True,
